@@ -3,27 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B20CC17025CDD24800F9B3AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC16F25CDD24800F9B3AC /* AppDelegate.swift */; };
 		B20CC17225CDD24800F9B3AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC17125CDD24800F9B3AC /* SceneDelegate.swift */; };
-		B20CC17425CDD24800F9B3AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC17325CDD24800F9B3AC /* ViewController.swift */; };
 		B20CC17725CDD24800F9B3AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20CC17525CDD24800F9B3AC /* Main.storyboard */; };
 		B20CC17925CDD24900F9B3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20CC17825CDD24900F9B3AC /* Assets.xcassets */; };
 		B20CC17C25CDD24900F9B3AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20CC17A25CDD24900F9B3AC /* LaunchScreen.storyboard */; };
+		B20CC1A025CE91FC00F9B3AC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC19F25CE91FC00F9B3AC /* UIViewExtension.swift */; };
+		B20CC1A325CE928100F9B3AC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1A225CE928100F9B3AC /* Colors.swift */; };
+		B20CC1A625CE93E400F9B3AC /* AttributedStringsStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1A525CE93E400F9B3AC /* AttributedStringsStyles.swift */; };
+		B20CC1A925CE962E00F9B3AC /* StylingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1A825CE962E00F9B3AC /* StylingHelpers.swift */; };
+		B20CC1AC25CEFA0A00F9B3AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1AB25CEFA0A00F9B3AC /* Constants.swift */; };
+		B20CC1AF25CEFEB900F9B3AC /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1AE25CEFEB900F9B3AC /* ImagesCollectionViewController.swift */; };
+		B20CC1B325CF3D6E00F9B3AC /* UnsplashKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1B225CF3D6E00F9B3AC /* UnsplashKey.swift */; };
+		B20CC1B725CFE6CF00F9B3AC /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1B625CFE6CF00F9B3AC /* PhotoCell.swift */; };
+		B20CC1BB25CFF54900F9B3AC /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1BA25CFF54900F9B3AC /* PhotosModel.swift */; };
+		B20CC1BF25CFF7AE00F9B3AC /* APIRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1BE25CFF7AE00F9B3AC /* APIRequestService.swift */; };
+		B20CC1C625D0859A00F9B3AC /* RandomPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1C525D0859A00F9B3AC /* RandomPhoto.swift */; };
+		BB5F26129F14F7A00231D568 /* Pods_Randomgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8737D5076866ED057EA27045 /* Pods-Randomgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomgram.release.xcconfig"; path = "Target Support Files/Pods-Randomgram/Pods-Randomgram.release.xcconfig"; sourceTree = "<group>"; };
 		B20CC16C25CDD24800F9B3AC /* Randomgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Randomgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20CC16F25CDD24800F9B3AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B20CC17125CDD24800F9B3AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B20CC17325CDD24800F9B3AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B20CC17625CDD24800F9B3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B20CC17825CDD24900F9B3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B20CC17B25CDD24900F9B3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B20CC17D25CDD24900F9B3AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B20CC19F25CE91FC00F9B3AC /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B20CC1A225CE928100F9B3AC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B20CC1A525CE93E400F9B3AC /* AttributedStringsStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringsStyles.swift; sourceTree = "<group>"; };
+		B20CC1A825CE962E00F9B3AC /* StylingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylingHelpers.swift; sourceTree = "<group>"; };
+		B20CC1AB25CEFA0A00F9B3AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B20CC1AE25CEFEB900F9B3AC /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		B20CC1B225CF3D6E00F9B3AC /* UnsplashKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashKey.swift; sourceTree = "<group>"; };
+		B20CC1B625CFE6CF00F9B3AC /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		B20CC1BA25CFF54900F9B3AC /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
+		B20CC1BE25CFF7AE00F9B3AC /* APIRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestService.swift; sourceTree = "<group>"; };
+		B20CC1C525D0859A00F9B3AC /* RandomPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhoto.swift; sourceTree = "<group>"; };
+		B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7FA90B1065CFCEBF8B8FE26 /* Pods-Randomgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomgram.debug.xcconfig"; path = "Target Support Files/Pods-Randomgram/Pods-Randomgram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5F26129F14F7A00231D568 /* Pods_Randomgram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58FCFF8E8C2939E37B8C40D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7FA90B1065CFCEBF8B8FE26 /* Pods-Randomgram.debug.xcconfig */,
+				8737D5076866ED057EA27045 /* Pods-Randomgram.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B20CC16325CDD24800F9B3AC = {
 			isa = PBXGroup;
 			children = (
 				B20CC16E25CDD24800F9B3AC /* Randomgram */,
 				B20CC16D25CDD24800F9B3AC /* Products */,
+				58FCFF8E8C2939E37B8C40D0 /* Pods */,
+				F18591FF783CB6CAA227FC61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +92,81 @@
 		B20CC16E25CDD24800F9B3AC /* Randomgram */ = {
 			isa = PBXGroup;
 			children = (
+				B20CC1B925CFF52B00F9B3AC /* Services */,
+				B20CC19E25CE91ED00F9B3AC /* Extensions */,
+				B20CC18E25CDDAB100F9B3AC /* Views */,
+				B20CC18D25CDDAA400F9B3AC /* Models */,
+				B20CC18C25CDDA9C00F9B3AC /* Helpers */,
+				B20CC18A25CDDA6E00F9B3AC /* ViewControllers */,
 				B20CC16F25CDD24800F9B3AC /* AppDelegate.swift */,
 				B20CC17125CDD24800F9B3AC /* SceneDelegate.swift */,
-				B20CC17325CDD24800F9B3AC /* ViewController.swift */,
 				B20CC17525CDD24800F9B3AC /* Main.storyboard */,
 				B20CC17825CDD24900F9B3AC /* Assets.xcassets */,
 				B20CC17A25CDD24900F9B3AC /* LaunchScreen.storyboard */,
 				B20CC17D25CDD24900F9B3AC /* Info.plist */,
 			);
 			path = Randomgram;
+			sourceTree = "<group>";
+		};
+		B20CC18A25CDDA6E00F9B3AC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B20CC1AE25CEFEB900F9B3AC /* ImagesCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B20CC18C25CDDA9C00F9B3AC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B20CC1A225CE928100F9B3AC /* Colors.swift */,
+				B20CC1A525CE93E400F9B3AC /* AttributedStringsStyles.swift */,
+				B20CC1A825CE962E00F9B3AC /* StylingHelpers.swift */,
+				B20CC1AB25CEFA0A00F9B3AC /* Constants.swift */,
+				B20CC1B225CF3D6E00F9B3AC /* UnsplashKey.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B20CC18D25CDDAA400F9B3AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B20CC1BA25CFF54900F9B3AC /* PhotosModel.swift */,
+				B20CC1C525D0859A00F9B3AC /* RandomPhoto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B20CC18E25CDDAB100F9B3AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B20CC1B625CFE6CF00F9B3AC /* PhotoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B20CC19E25CE91ED00F9B3AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B20CC19F25CE91FC00F9B3AC /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B20CC1B925CFF52B00F9B3AC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B20CC1BE25CFF7AE00F9B3AC /* APIRequestService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F18591FF783CB6CAA227FC61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B20CC18025CDD24900F9B3AC /* Build configuration list for PBXNativeTarget "Randomgram" */;
 			buildPhases = (
+				ABA4C8E71589F1A951B59E9A /* [CP] Check Pods Manifest.lock */,
 				B20CC16825CDD24800F9B3AC /* Sources */,
 				B20CC16925CDD24800F9B3AC /* Frameworks */,
 				B20CC16A25CDD24800F9B3AC /* Resources */,
+				E8568FE5969098E685FCB0DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +236,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ABA4C8E71589F1A951B59E9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Randomgram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8568FE5969098E685FCB0DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Randomgram/Pods-Randomgram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Randomgram/Pods-Randomgram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Randomgram/Pods-Randomgram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B20CC16825CDD24800F9B3AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20CC17425CDD24800F9B3AC /* ViewController.swift in Sources */,
+				B20CC1A025CE91FC00F9B3AC /* UIViewExtension.swift in Sources */,
+				B20CC1BB25CFF54900F9B3AC /* PhotosModel.swift in Sources */,
+				B20CC1BF25CFF7AE00F9B3AC /* APIRequestService.swift in Sources */,
+				B20CC1A625CE93E400F9B3AC /* AttributedStringsStyles.swift in Sources */,
+				B20CC1A325CE928100F9B3AC /* Colors.swift in Sources */,
+				B20CC1C625D0859A00F9B3AC /* RandomPhoto.swift in Sources */,
+				B20CC1A925CE962E00F9B3AC /* StylingHelpers.swift in Sources */,
 				B20CC17025CDD24800F9B3AC /* AppDelegate.swift in Sources */,
 				B20CC17225CDD24800F9B3AC /* SceneDelegate.swift in Sources */,
+				B20CC1B725CFE6CF00F9B3AC /* PhotoCell.swift in Sources */,
+				B20CC1AF25CEFEB900F9B3AC /* ImagesCollectionViewController.swift in Sources */,
+				B20CC1AC25CEFA0A00F9B3AC /* Constants.swift in Sources */,
+				B20CC1B325CF3D6E00F9B3AC /* UnsplashKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +439,14 @@
 		};
 		B20CC18125CDD24900F9B3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7FA90B1065CFCEBF8B8FE26 /* Pods-Randomgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PGF677JNQ;
 				INFOPLIST_FILE = Randomgram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +460,14 @@
 		};
 		B20CC18225CDD24900F9B3AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8737D5076866ED057EA27045 /* Pods-Randomgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PGF677JNQ;
 				INFOPLIST_FILE = Randomgram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

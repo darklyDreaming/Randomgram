@@ -7,4 +7,7 @@ target 'Randomgram' do
 
   # Pods for Randomgram
 
+pod 'Kingfisher', '~> 6.1'
+
+
 end

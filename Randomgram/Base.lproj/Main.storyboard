@@ -1,32 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eDc-Nk-kWf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Randomgram-->
+        <scene sceneID="8s7-rA-rvC">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Randomgram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                <collectionViewController id="r7E-W7-MuW" customClass="ImagesCollectionViewController" customModule="Randomgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" directionalLockEnabled="YES" pagingEnabled="YES" dataMode="prototypes" id="GLa-oQ-LGn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.086450301110744476" green="0.3308907151222229" blue="0.40448939800262451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8hW-YU-wNL">
+                            <size key="itemSize" width="356" height="449"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="kRD-6l-KxG" customClass="PhotoCell" customModule="Randomgram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="162.5" width="356" height="449"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2rW-ej-k0y">
+                                    <rect key="frame" x="0.0" y="0.0" width="356" height="449"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="QT8-tT-h1d">
+                                            <rect key="frame" x="0.0" y="0.0" width="356" height="449"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="QT8-tT-h1d" secondAttribute="bottom" id="IpX-gY-HWW"/>
+                                        <constraint firstItem="QT8-tT-h1d" firstAttribute="leading" secondItem="2rW-ej-k0y" secondAttribute="leading" id="cgJ-Yn-sIG"/>
+                                        <constraint firstAttribute="trailing" secondItem="QT8-tT-h1d" secondAttribute="trailing" id="lJy-ZC-k3s"/>
+                                        <constraint firstItem="QT8-tT-h1d" firstAttribute="top" secondItem="2rW-ej-k0y" secondAttribute="top" id="sZj-he-qaJ"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="QT8-tT-h1d" id="K1X-Ct-8Lr"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="r7E-W7-MuW" id="hq9-do-dmP"/>
+                            <outlet property="delegate" destination="r7E-W7-MuW" id="1zL-5z-hmj"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Randomgram" id="STX-sK-UKZ"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NhA-gu-S0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="74"/>
+            <point key="canvasLocation" x="1818.840579710145" y="-26.116071428571427"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jmx-CL-GDh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eDc-Nk-kWf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.75" contentMode="scaleToFill" id="YRC-iM-aJR" userLabel="Randomgram">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r7E-W7-MuW" kind="relationship" relationship="rootViewController" id="zq8-s7-fqF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShK-UC-g4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="-26.116071428571427"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="placeholder" width="300" height="202"/>
     </resources>
 </document>

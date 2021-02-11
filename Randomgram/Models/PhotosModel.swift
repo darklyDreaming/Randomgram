@@ -26,7 +26,7 @@ class PhotosModel {
     private lazy var urlsArray = [URL]()
     private lazy var randomPhotosArray = [RandomPhoto]()
     
-    /// This function receives an array of random photos from the model.
+    /// This function receives an array of random photos from the API Service.
     /// It is used to form a new array of random photos and reset the view in case the user taps Refresh button.
     /// To add more photos to the collection set the update parameter to true.
     /// - Parameter update: Set to true in order to add more photos to the feed (by default it is false). 

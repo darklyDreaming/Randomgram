@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+struct UnsplashKey {
+    
+    static let apiKey = ""
+    
+}

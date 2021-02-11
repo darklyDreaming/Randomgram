@@ -20,6 +20,9 @@ class APIRequestService {
         503 : "Error on server"
     ]
     
+    /// This function requests random photos from the Unsplash API. If the response contains error, it is printed to the console.
+    /// Then it passes the data to the model.
+    /// - Parameter completion: Escaping closure with the data retrieved (optional).
     func requestPhotos(completion: @escaping (Data?) -> () ) {
         
         let api = "https://api.unsplash.com/photos/random?count=20&client_id=" + UnsplashKey.apiKey
@@ -32,12 +35,10 @@ class APIRequestService {
         
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "GET"
-
         
         let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
             
             if let response = response as? HTTPURLResponse {
-                
                 if response.statusCode > 200 {
                     print("Response code: \(response.statusCode)")
                     print(self.apiErrors[response.statusCode] ?? "Some error")

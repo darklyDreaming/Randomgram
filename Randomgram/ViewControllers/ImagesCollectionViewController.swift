@@ -20,7 +20,6 @@ final class ImagesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-//        collectionView.backgroundColor = .black
         collectionView.alpha = 0
         photosModel.delegate = self
         photosModel.getPhotos()

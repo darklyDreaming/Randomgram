@@ -13,6 +13,7 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     var currentImage : UIImage?
+    lazy var background: UIColor = .black
     
     var randomPhoto: RandomPhoto? {
         

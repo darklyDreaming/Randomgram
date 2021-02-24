@@ -15,7 +15,7 @@ protocol PhotosModelDelegate {
     func photosFetched(randomPhotosArray: [RandomPhoto])
     /// This function is called by the Photo Model when the user had scrolled far enough to the end of the feed and triggered the getPhotos(update: true) function.
     /// - Parameter randomPhotosArray: Contains an updated array of photos fetched from the API.
-    func addMorePhotos(randomPhotosArray: [RandomPhoto])
+    func addMorePhotos(newPhotosArray: [RandomPhoto])
 }
 
 class PhotosModel {
@@ -49,11 +49,26 @@ class PhotosModel {
             }
             if update {
                 self.randomPhotosArray.append(contentsOf: randomPhotosFetched)
-                self.delegate?.addMorePhotos(randomPhotosArray: self.randomPhotosArray)
+                self.delegate?.addMorePhotos(newPhotosArray: randomPhotosFetched)
             } else {
                 self.randomPhotosArray = randomPhotosFetched
+                self.getAverageColors(photos: self.randomPhotosArray)
                 self.delegate?.photosFetched(randomPhotosArray: self.randomPhotosArray)
             }
+        }
+    }
+    
+    func getAverageColors(photos: [RandomPhoto]) {
+        
+//        let urls = photos.map { URL(string: $0.urls.small) }
+        let urls = photos.compactMap { URL(string: $0.urls.small) }
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            let prefetcher = ImagePrefetcher(urls: urls, options: nil) { (skippedResources, failedResources, completedResources) in
+                print(completedResources)
+            }
+            prefetcher.start()
         }
     }
 }

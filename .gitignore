@@ -3,6 +3,7 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 Randomgram/Helpers/UnsplashKey.swift
 Randomgram.xcodeproj/project.xcworkspace/xcuserdata/yulia.xcuserdatad/UserInterfaceState.xcuserstate
+Randomgram.xcodeproj/xcuserdata/yulia.xcuserdatad/xcschemes/xcschememanagement.plist
 
 ## User settings
 xcuserdata/

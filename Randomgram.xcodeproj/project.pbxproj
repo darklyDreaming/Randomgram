@@ -21,6 +21,7 @@
 		B20CC1C625D0859A00F9B3AC /* RandomPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1C525D0859A00F9B3AC /* RandomPhoto.swift */; };
 		B20CC1D925D477F600F9B3AC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1D825D477F600F9B3AC /* UIImageExtension.swift */; };
 		B2D6532725E690C100884BA5 /* UnsplashKeyTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6532625E690C100884BA5 /* UnsplashKeyTemplate.swift */; };
+		B2D6532F25E6957700884BA5 /* BGCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6532E25E6957700884BA5 /* BGCacheManager.swift */; };
 		BB5F26129F14F7A00231D568 /* Pods_Randomgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		B20CC1C525D0859A00F9B3AC /* RandomPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhoto.swift; sourceTree = "<group>"; };
 		B20CC1D825D477F600F9B3AC /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		B2D6532625E690C100884BA5 /* UnsplashKeyTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashKeyTemplate.swift; sourceTree = "<group>"; };
+		B2D6532E25E6957700884BA5 /* BGCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGCacheManager.swift; sourceTree = "<group>"; };
 		B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FA90B1065CFCEBF8B8FE26 /* Pods-Randomgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomgram.debug.xcconfig"; path = "Target Support Files/Pods-Randomgram/Pods-Randomgram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B20CC1BE25CFF7AE00F9B3AC /* APIRequestService.swift */,
+				B2D6532E25E6957700884BA5 /* BGCacheManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				B20CC17025CDD24800F9B3AC /* AppDelegate.swift in Sources */,
 				B20CC17225CDD24800F9B3AC /* SceneDelegate.swift in Sources */,
 				B20CC1D925D477F600F9B3AC /* UIImageExtension.swift in Sources */,
+				B2D6532F25E6957700884BA5 /* BGCacheManager.swift in Sources */,
 				B20CC1B725CFE6CF00F9B3AC /* PhotoCell.swift in Sources */,
 				B20CC1AF25CEFEB900F9B3AC /* ImagesCollectionViewController.swift in Sources */,
 				B20CC1AC25CEFA0A00F9B3AC /* Constants.swift in Sources */,

@@ -49,11 +49,11 @@ final class ImagesCollectionViewController: UICollectionViewController {
         let cell = collectionView.visibleCells.first as? PhotoCell
         guard let cellImage = cell?.currentImage else {return}
         
-        if let averageColor = cellImage.averageColor {
-            UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: {
-                self.collectionView.backgroundColor = averageColor
-            }, completion: nil)
-        }
+//        if let averageColor = cellImage.averageColor {
+//            UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: {
+//                self.collectionView.backgroundColor = averageColor
+//            }, completion: nil)
+//        }
         
     }
     
@@ -115,9 +115,9 @@ extension ImagesCollectionViewController: PhotosModelDelegate {
     
     }
 
-    func addMorePhotos(randomPhotosArray: [RandomPhoto]) {
+    func addMorePhotos(newPhotosArray: [RandomPhoto]) {
         
-        self.randomPhotos = randomPhotosArray
+        self.randomPhotos.append(contentsOf: newPhotosArray)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }

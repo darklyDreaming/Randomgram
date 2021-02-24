@@ -12,15 +12,21 @@ class BGCacheManager {
     
     static var bgCache = [String : UIColor]()
     
-    static func getBG(imageUrl: String) -> UIColor? {
+    static func getBG(id: String) -> UIColor? {
         
-        return bgCache[imageUrl]
+        return bgCache[id]
         
     }
     
-    static func saveBG(imageUrl: String, averageColor: UIColor) {
+    static func saveBG(id: String, averageColor: UIColor) {
         
-        bgCache[imageUrl] = averageColor
+        bgCache[id] = averageColor
+    
+    }
+    
+    static func clearCache() {
+        
+        bgCache = [String : UIColor]()
         
     }
 }

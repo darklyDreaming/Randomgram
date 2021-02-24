@@ -21,9 +21,7 @@ protocol PhotosModelDelegate {
 class PhotosModel {
     
     var requestService = APIRequestService()
-    
     var delegate: PhotosModelDelegate?
-    private lazy var urlsArray = [URL]()
     private lazy var randomPhotosArray = [RandomPhoto]()
     
     /// This function receives an array of random photos from the API Service.
@@ -49,6 +47,7 @@ class PhotosModel {
             }
             if update {
                 self.randomPhotosArray.append(contentsOf: randomPhotosFetched)
+                self.getAverageColors(photos: self.randomPhotosArray)
                 self.delegate?.addMorePhotos(newPhotosArray: randomPhotosFetched)
             } else {
                 self.randomPhotosArray = randomPhotosFetched
@@ -57,18 +56,35 @@ class PhotosModel {
             }
         }
     }
-    
+    /// This func gets small images and processes them to create a cache of backgrounds to be displayed for each cell.
+    /// - Parameter photos: an array of photos to be processed.
     func getAverageColors(photos: [RandomPhoto]) {
         
-//        let urls = photos.map { URL(string: $0.urls.small) }
-        let urls = photos.compactMap { URL(string: $0.urls.small) }
-        
+        let downloader = ImageDownloader.default
+
         DispatchQueue.global(qos: .userInteractive).async {
             
-            let prefetcher = ImagePrefetcher(urls: urls, options: nil) { (skippedResources, failedResources, completedResources) in
-                print(completedResources)
+            for photo in photos {
+                
+                guard let smallImageUrl = URL(string: photo.urls.small) else {
+                    continue
+                }
+                downloader.downloadImage(with: smallImageUrl) { result in
+                    
+                    switch result {
+                    case .success(let value):
+                        
+                        let averageColor = value.image.averageColor
+                        BGCacheManager.saveBG(id: photo.id, averageColor: averageColor ?? .lightGray)
+                        
+                    case .failure:
+                        break
+                    }
+                    
+                }
             }
-            prefetcher.start()
+            
         }
     }
+    
 }

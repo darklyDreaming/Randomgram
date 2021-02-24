@@ -20,6 +20,7 @@
 		B20CC1BF25CFF7AE00F9B3AC /* APIRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1BE25CFF7AE00F9B3AC /* APIRequestService.swift */; };
 		B20CC1C625D0859A00F9B3AC /* RandomPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1C525D0859A00F9B3AC /* RandomPhoto.swift */; };
 		B20CC1D925D477F600F9B3AC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1D825D477F600F9B3AC /* UIImageExtension.swift */; };
+		B2D6532725E690C100884BA5 /* UnsplashKeyTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6532625E690C100884BA5 /* UnsplashKeyTemplate.swift */; };
 		BB5F26129F14F7A00231D568 /* Pods_Randomgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		B20CC1BE25CFF7AE00F9B3AC /* APIRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestService.swift; sourceTree = "<group>"; };
 		B20CC1C525D0859A00F9B3AC /* RandomPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhoto.swift; sourceTree = "<group>"; };
 		B20CC1D825D477F600F9B3AC /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		B2D6532625E690C100884BA5 /* UnsplashKeyTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashKeyTemplate.swift; sourceTree = "<group>"; };
 		B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FA90B1065CFCEBF8B8FE26 /* Pods-Randomgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomgram.debug.xcconfig"; path = "Target Support Files/Pods-Randomgram/Pods-Randomgram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 			children = (
 				B20CC1AB25CEFA0A00F9B3AC /* Constants.swift */,
 				B20CC1B225CF3D6E00F9B3AC /* UnsplashKey.swift */,
+				B2D6532625E690C100884BA5 /* UnsplashKeyTemplate.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20CC1BB25CFF54900F9B3AC /* PhotosModel.swift in Sources */,
+				B2D6532725E690C100884BA5 /* UnsplashKeyTemplate.swift in Sources */,
 				B20CC1BF25CFF7AE00F9B3AC /* APIRequestService.swift in Sources */,
 				B20CC1C625D0859A00F9B3AC /* RandomPhoto.swift in Sources */,
 				B20CC17025CDD24800F9B3AC /* AppDelegate.swift in Sources */,

@@ -90,6 +90,7 @@
 		B20CC16E25CDD24800F9B3AC /* Randomgram */ = {
 			isa = PBXGroup;
 			children = (
+				B2B504B825E97F620026E778 /* Storyboards */,
 				B20CC1B925CFF52B00F9B3AC /* Services */,
 				B20CC19E25CE91ED00F9B3AC /* Extensions */,
 				B20CC18E25CDDAB100F9B3AC /* Views */,
@@ -98,9 +99,7 @@
 				B20CC18A25CDDA6E00F9B3AC /* ViewControllers */,
 				B20CC16F25CDD24800F9B3AC /* AppDelegate.swift */,
 				B20CC17125CDD24800F9B3AC /* SceneDelegate.swift */,
-				B20CC17525CDD24800F9B3AC /* Main.storyboard */,
 				B20CC17825CDD24900F9B3AC /* Assets.xcassets */,
-				B20CC17A25CDD24900F9B3AC /* LaunchScreen.storyboard */,
 				B20CC17D25CDD24900F9B3AC /* Info.plist */,
 			);
 			path = Randomgram;
@@ -156,6 +155,15 @@
 				B2D6532E25E6957700884BA5 /* BGCacheManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B2B504B825E97F620026E778 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B20CC17525CDD24800F9B3AC /* Main.storyboard */,
+				B20CC17A25CDD24900F9B3AC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F18591FF783CB6CAA227FC61 /* Frameworks */ = {

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-protocol PhotosModelDelegate {
+protocol PhotosModelDelegate: class {
     /// This function is called by the Photo Model when it successfully fetches a new array of photos.
     /// - Parameter randomPhotosArray: Contains a new array of photos fetched from the API.
     func photosFetched(randomPhotosArray: [RandomPhoto])
@@ -20,14 +20,14 @@ protocol PhotosModelDelegate {
 
 class PhotosModel {
     
-    var requestService = APIRequestService()
-    var delegate: PhotosModelDelegate?
+    weak var delegate: PhotosModelDelegate?
+    private var requestService = APIRequestService()
     private lazy var randomPhotosArray = [RandomPhoto]()
     
     /// This function receives an array of random photos from the API Service.
     /// It is used to form a new array of random photos and reset the view in case the user taps Refresh button.
     /// To add more photos to the collection set the update parameter to true.
-    /// - Parameter update: Set to true in order to add more photos to the feed (by default it is false). 
+    /// - Parameter update: Set to true in order to add more photos to the feed.
     func getPhotos(update: Bool = false) {
         
         requestService.requestPhotos { (data) in
@@ -38,13 +38,13 @@ class PhotosModel {
             }
             
             let decoder = JSONDecoder()
-            
             let randomPhotos = try? decoder.decode([RandomPhoto].self, from: data)
             
             guard let randomPhotosFetched = randomPhotos else {
                 print("Sorry, something went wrong during decoding")
                 return
             }
+            
             if update {
                 self.randomPhotosArray.append(contentsOf: randomPhotosFetched)
                 self.getAverageColors(photos: self.randomPhotosArray)
@@ -56,6 +56,7 @@ class PhotosModel {
             }
         }
     }
+    
     /// This func gets small images and processes them to create a cache of backgrounds to be displayed for each cell.
     /// - Parameter photos: an array of photos to be processed.
     func getAverageColors(photos: [RandomPhoto]) {

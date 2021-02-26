@@ -13,9 +13,8 @@ final class ImagesCollectionViewController: UICollectionViewController {
     @IBOutlet weak var refreshButton: UIBarButtonItem!
     
     private let reuseIdentifier = Constants.CollectionView.photoCell
-    
-    var photosModel = PhotosModel()
-    var randomPhotos = [RandomPhoto]()
+    private let photosModel = PhotosModel()
+    private var randomPhotos = [RandomPhoto]()
     
     override func viewDidLoad() {
         
@@ -25,7 +24,6 @@ final class ImagesCollectionViewController: UICollectionViewController {
         photosModel.getPhotos()
         
     }
-    
     
     @IBAction func refreshTapped(_ sender: Any) {
         
@@ -42,8 +40,8 @@ final class ImagesCollectionViewController: UICollectionViewController {
         }
         
     }
-    
-    // MARK: -UICollectionViewDataSource
+
+// MARK: -UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -77,6 +75,7 @@ final class ImagesCollectionViewController: UICollectionViewController {
     }
 }
 
+// TODO: Move these methods elsewhere to separate concerns
 // MARK: -Delegate Flow Layout Methods
 
 extension UICollectionViewController: UICollectionViewDelegateFlowLayout {

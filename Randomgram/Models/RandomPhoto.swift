@@ -8,14 +8,14 @@
 import Foundation
 
 
-struct RandomPhoto: Codable {
+struct RandomPhoto: Decodable {
     
     let id: String
     let urls: Urls
     let width: Int
     let height: Int
     
-    struct Urls: Codable {
+    struct Urls: Decodable {
         let raw, full, regular, small: String
         let thumb: String
     }

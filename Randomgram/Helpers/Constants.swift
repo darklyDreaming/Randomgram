@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Constants {
+enum Constants {
     
-    struct CollectionView {
+    enum CollectionView {
         
         static let photoCell = "PhotoCell"
         

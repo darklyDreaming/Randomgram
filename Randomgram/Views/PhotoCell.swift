@@ -18,7 +18,7 @@ class PhotoCell: UICollectionViewCell {
     var randomPhoto: RandomPhoto? {
         
         didSet {
-            
+           // TODO: remove logic from the cell
             guard let randomPhoto = randomPhoto else {return}
             guard let imageUrl = URL(string: randomPhoto.urls.regular) else {return}
             

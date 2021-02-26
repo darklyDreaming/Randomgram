@@ -41,7 +41,7 @@ class APIRequestService {
             if let response = response as? HTTPURLResponse {
                 if response.statusCode > 200 {
                     print("Response code: \(response.statusCode)")
-                    print(self.apiErrors[response.statusCode] ?? "Some error")
+                    print(self.apiErrors[response.statusCode] ?? "Unknown error")
                     return
                 }
             }

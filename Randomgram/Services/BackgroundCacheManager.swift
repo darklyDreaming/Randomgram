@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BGCacheManager {
+class BackgroundCacheManager {
     
     static var bgCache = [String : UIColor]()
 

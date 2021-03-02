@@ -20,6 +20,7 @@ final class ImagesCollectionViewController: UICollectionViewController {
         
         super.viewDidLoad()
         collectionView.alpha = 0
+        ImageCache.default.memoryStorage.config.totalCostLimit = 50 * 1024 * 1024
         photosModel.delegate = self
         photosModel.getPhotos()
         
@@ -35,7 +36,8 @@ final class ImagesCollectionViewController: UICollectionViewController {
                 self.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: true)
                 self.collectionView.isPagingEnabled = true
             }
-            BGCacheManager.clearCache()
+            BackgroundCacheManager.clearCache()
+            ImageCache.default.clearCache()
             self.photosModel.getPhotos()
         }
         
@@ -66,7 +68,7 @@ final class ImagesCollectionViewController: UICollectionViewController {
         
         let currentPhoto = randomPhotos[indexPath.row]
         
-        let bg = BGCacheManager.getBG(id: currentPhoto.id)
+        let bg = BackgroundCacheManager.getBackground(id: currentPhoto.id)
         
         UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: {
             self.collectionView.backgroundColor = bg ?? .lightGray
@@ -75,7 +77,6 @@ final class ImagesCollectionViewController: UICollectionViewController {
     }
 }
 
-// TODO: Move these methods elsewhere to separate concerns
 // MARK: -Delegate Flow Layout Methods
 
 extension UICollectionViewController: UICollectionViewDelegateFlowLayout {

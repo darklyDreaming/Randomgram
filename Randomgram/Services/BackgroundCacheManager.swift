@@ -10,17 +10,17 @@ import UIKit
 
 class BackgroundCacheManager {
     
-    static var bgCache = [String : UIColor]()
+    static var backgroundCache = [String : UIColor]()
 
-    static func getBG(id: String) -> UIColor? {
-        return bgCache[id]
+    static func getBackground(id: String) -> UIColor? {
+        return backgroundCache[id]
     }
     
-    static func saveBG(id: String, averageColor: UIColor) {
-        bgCache[id] = averageColor
+    static func saveBackground(id: String, averageColor: UIColor) {
+        backgroundCache[id] = averageColor
     }
     
     static func clearCache() {
-        bgCache = [String : UIColor]()
+        backgroundCache = [String : UIColor]()
     }
 }

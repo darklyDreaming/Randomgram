@@ -10,7 +10,7 @@ import Foundation
 
 class APIRequestService {
     
-    let apiErrors: [Int : String] = [
+    private let apiErrors: [Int : String] = [
         200 : "OK",
         400 : "Bad request",
         401 : "Unauthorized",

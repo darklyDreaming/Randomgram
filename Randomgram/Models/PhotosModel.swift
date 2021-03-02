@@ -24,7 +24,7 @@ class PhotosModel {
     private var requestService = APIRequestService()
     private lazy var randomPhotosArray = [RandomPhoto]()
     
-    /// This function receives an array of random photos from the API Service.
+    /// This function receives an array of random photo objects from the API Service.
     /// It is used to form a new array of random photos and reset the view in case the user taps Refresh button.
     /// To add more photos to the collection set the update parameter to true.
     /// - Parameter update: Set to true in order to add more photos to the feed.
@@ -47,13 +47,13 @@ class PhotosModel {
             
             if update {
                 self.randomPhotosArray.append(contentsOf: randomPhotosFetched)
-                self.getAverageColors(photos: self.randomPhotosArray)
                 self.delegate?.addMorePhotos(newPhotosArray: randomPhotosFetched)
             } else {
                 self.randomPhotosArray = randomPhotosFetched
-                self.getAverageColors(photos: self.randomPhotosArray)
                 self.delegate?.photosFetched(randomPhotosArray: self.randomPhotosArray)
             }
+            self.getAverageColors(photos: self.randomPhotosArray)
+            
         }
     }
     
@@ -76,7 +76,7 @@ class PhotosModel {
                     case .success(let value):
                         
                         let averageColor = value.image.averageColor
-                        BGCacheManager.saveBG(id: photo.id, averageColor: averageColor ?? .lightGray)
+                        BackgroundCacheManager.saveBackground(id: photo.id, averageColor: averageColor ?? .lightGray)
                         
                     case .failure:
                         break

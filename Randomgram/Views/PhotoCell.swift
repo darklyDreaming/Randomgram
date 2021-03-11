@@ -12,7 +12,6 @@ class PhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
-//    var currentImage : UIImage?
     lazy var background: UIColor = .black
     
     var randomPhoto: RandomPhoto? {
@@ -23,7 +22,7 @@ class PhotoCell: UICollectionViewCell {
             guard let imageUrl = URL(string: randomPhoto.urls.regular) else {return}
             
             imageView.kf.setImage(with: imageUrl)
-            imageView.contentMode = .scaleAspectFill
+            imageView.contentMode = .scaleAspectFit
         }
     }
     

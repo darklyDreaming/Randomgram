@@ -63,9 +63,9 @@ class PhotosModel {
         
         let downloader = ImageDownloader.default
 
-        DispatchQueue.global(qos: .userInteractive).async {
+        DispatchQueue.global(qos: .utility).async {
             
-            for photo in photos {
+            for photo in photos  {
                 
                 guard let smallImageUrl = URL(string: photo.urls.small) else {
                     continue
@@ -75,8 +75,9 @@ class PhotosModel {
                     switch result {
                     case .success(let value):
                         
-                        let averageColor = value.image.averageColor
+                        autoreleasepool { let averageColor = value.image.averageColor
                         BackgroundCacheManager.saveBackground(id: photo.id, averageColor: averageColor ?? .lightGray)
+                        }
                         
                     case .failure:
                         break

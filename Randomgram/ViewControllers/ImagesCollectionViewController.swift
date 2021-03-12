@@ -14,11 +14,16 @@ final class ImagesCollectionViewController: UICollectionViewController {
     
     private let reuseIdentifier = Constants.CollectionView.photoCell
     private let photosModel = PhotosModel()
+    private let networkObserver = NetworkObserver()
+    private let alertsFactory = Alerts()
+    private var subscribers = [NetworkObserverSubscriber]()
     private var randomPhotos = [RandomPhoto]()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.subscribers.append(self)
+        networkObserver.attachSubscribers(subscribers: subscribers)
         collectionView.alpha = 0
         ImageCache.default.memoryStorage.config.totalCostLimit = 50 * 1024 * 1024
         photosModel.delegate = self
@@ -42,8 +47,8 @@ final class ImagesCollectionViewController: UICollectionViewController {
         }
         
     }
-
-// MARK: -UICollectionViewDataSource
+    
+    // MARK: -UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -110,7 +115,7 @@ extension ImagesCollectionViewController: PhotosModelDelegate {
                 self.collectionView.alpha = 1
             }, completion: nil)
         }
-
+        
     }
     
     func addMorePhotos(newPhotosArray: [RandomPhoto]) {
@@ -121,4 +126,39 @@ extension ImagesCollectionViewController: PhotosModelDelegate {
         }
         
     }
+}
+
+extension ImagesCollectionViewController: NetworkObserverSubscriber {
+    
+    func showLostNetworkAlert() {
+        
+        DispatchQueue.main.async {
+            
+            let alert = self.alertsFactory.createAlert(type: .lostConnection)
+            if let alert = alert {
+                self.present(alert, animated: true)
+                let delay = DispatchTime.now() + 3
+                
+                DispatchQueue.main.asyncAfter(deadline: delay) {
+                    alert.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    func showConnectionRecoveredAlert() {
+        
+        DispatchQueue.main.async {
+            let alert = self.alertsFactory.createAlert(type: .connectionRecovered)
+            if let alert = alert {
+                self.present(alert, animated: true)
+                let delay = DispatchTime.now() + 3
+                
+                DispatchQueue.main.asyncAfter(deadline: delay) {
+                    alert.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
 }

@@ -22,7 +22,7 @@ class PhotoCell: UICollectionViewCell {
             guard let imageUrl = URL(string: randomPhoto.urls.regular) else {return}
             
             imageView.kf.setImage(with: imageUrl)
-            imageView.contentMode = .scaleAspectFit
+            imageView.contentMode = .scaleAspectFill
         }
     }
     

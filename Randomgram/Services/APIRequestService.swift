@@ -25,7 +25,7 @@ class APIRequestService {
     /// - Parameter completion: Escaping closure with the data retrieved (optional).
     func requestPhotos(completion: @escaping (Data?) -> () ) {
         
-        let api = "https://api.unsplash.com/photos/random?count=20&client_id=" + UnsplashKey.apiKey
+        let api = "https://api.unsplash.com/photos/random?count=20&orientation=portrait&client_id=" + UnsplashKey.apiKey
         
         let session = URLSession.shared
         guard let apiUrl = URL(string: api) else {

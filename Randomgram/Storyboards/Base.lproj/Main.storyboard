@@ -30,28 +30,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="356" height="449"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="tl6-KQ-iHu">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qlJ-ML-krk">
                                             <rect key="frame" x="0.0" y="0.0" width="356" height="449"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qlJ-ML-krk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="356" height="449"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="qlJ-ML-krk" firstAttribute="top" secondItem="tl6-KQ-iHu" secondAttribute="top" id="04n-vt-1Nk"/>
-                                                <constraint firstItem="qlJ-ML-krk" firstAttribute="width" secondItem="tl6-KQ-iHu" secondAttribute="width" id="LSM-eA-uMr"/>
-                                                <constraint firstItem="qlJ-ML-krk" firstAttribute="height" secondItem="tl6-KQ-iHu" secondAttribute="height" priority="250" id="OMt-QZ-95r"/>
-                                                <constraint firstAttribute="bottom" secondItem="qlJ-ML-krk" secondAttribute="bottom" id="ZyL-8H-B46"/>
-                                                <constraint firstItem="qlJ-ML-krk" firstAttribute="leading" secondItem="tl6-KQ-iHu" secondAttribute="leading" id="ipY-NJ-YGb"/>
-                                                <constraint firstAttribute="trailing" secondItem="qlJ-ML-krk" secondAttribute="trailing" id="rUt-0F-6rJ"/>
-                                            </constraints>
-                                        </scrollView>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="tl6-KQ-iHu" secondAttribute="trailing" id="2Bd-Q8-cSn"/>
-                                        <constraint firstItem="tl6-KQ-iHu" firstAttribute="leading" secondItem="2rW-ej-k0y" secondAttribute="leading" id="9s6-ga-jww"/>
-                                        <constraint firstAttribute="bottom" secondItem="tl6-KQ-iHu" secondAttribute="bottom" id="NBn-fu-T9u"/>
-                                        <constraint firstItem="tl6-KQ-iHu" firstAttribute="top" secondItem="2rW-ej-k0y" secondAttribute="top" id="fMm-70-T1k"/>
+                                        <constraint firstAttribute="trailing" secondItem="qlJ-ML-krk" secondAttribute="trailing" id="4GK-Ki-bde"/>
+                                        <constraint firstItem="qlJ-ML-krk" firstAttribute="leading" secondItem="2rW-ej-k0y" secondAttribute="leading" id="NVk-lc-Y4q"/>
+                                        <constraint firstItem="qlJ-ML-krk" firstAttribute="top" secondItem="2rW-ej-k0y" secondAttribute="top" id="OcE-6J-JWm"/>
+                                        <constraint firstAttribute="bottom" secondItem="qlJ-ML-krk" secondAttribute="bottom" id="RDE-rv-iL0"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>

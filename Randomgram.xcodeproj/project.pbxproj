@@ -22,6 +22,8 @@
 		B20CC1D925D477F600F9B3AC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CC1D825D477F600F9B3AC /* UIImageExtension.swift */; };
 		B2D6532725E690C100884BA5 /* UnsplashKeyTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6532625E690C100884BA5 /* UnsplashKeyTemplate.swift */; };
 		B2D6532F25E6957700884BA5 /* BackgroundCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6532E25E6957700884BA5 /* BackgroundCacheManager.swift */; };
+		B2F55F1125FA8D9700C6C003 /* NetworkConnectionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F55F1025FA8D9700C6C003 /* NetworkConnectionObserver.swift */; };
+		B2F55F1925FB8A8D00C6C003 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F55F1825FB8A8D00C6C003 /* Alerts.swift */; };
 		BB5F26129F14F7A00231D568 /* Pods_Randomgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		B20CC1D825D477F600F9B3AC /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		B2D6532625E690C100884BA5 /* UnsplashKeyTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashKeyTemplate.swift; sourceTree = "<group>"; };
 		B2D6532E25E6957700884BA5 /* BackgroundCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCacheManager.swift; sourceTree = "<group>"; };
+		B2F55F1025FA8D9700C6C003 /* NetworkConnectionObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionObserver.swift; sourceTree = "<group>"; };
+		B2F55F1825FB8A8D00C6C003 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		B70219AEFF9A2AB11B7F7608 /* Pods_Randomgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FA90B1065CFCEBF8B8FE26 /* Pods-Randomgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomgram.debug.xcconfig"; path = "Target Support Files/Pods-Randomgram/Pods-Randomgram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +157,8 @@
 			children = (
 				B20CC1BE25CFF7AE00F9B3AC /* APIRequestService.swift */,
 				B2D6532E25E6957700884BA5 /* BackgroundCacheManager.swift */,
+				B2F55F1025FA8D9700C6C003 /* NetworkConnectionObserver.swift */,
+				B2F55F1825FB8A8D00C6C003 /* Alerts.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -289,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20CC1BB25CFF54900F9B3AC /* PhotosModel.swift in Sources */,
+				B2F55F1925FB8A8D00C6C003 /* Alerts.swift in Sources */,
 				B2D6532725E690C100884BA5 /* UnsplashKeyTemplate.swift in Sources */,
+				B2F55F1125FA8D9700C6C003 /* NetworkConnectionObserver.swift in Sources */,
 				B20CC1BF25CFF7AE00F9B3AC /* APIRequestService.swift in Sources */,
 				B20CC1C625D0859A00F9B3AC /* RandomPhoto.swift in Sources */,
 				B20CC17025CDD24800F9B3AC /* AppDelegate.swift in Sources */,

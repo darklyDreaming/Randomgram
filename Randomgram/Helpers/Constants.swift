@@ -15,4 +15,13 @@ enum Constants {
         
     }
     
+    enum AlertsTexts {
+        
+        static let lostConnectionAlertTitle = "Error"
+        static let lostConnectionAlertText = "Experiencing problems with connection..."
+        
+        static let recoveredConnectionAlertTitle = "Connection found"
+        static let recoveredConnectionAlertText = "Will attempt to download photos"
+        
+    }
 }

@@ -62,7 +62,7 @@ class PhotosModel {
     func getAverageColors(photos: [RandomPhoto]) {
         
         let downloader = ImageDownloader.default
-
+        
         DispatchQueue.global(qos: .utility).async {
             
             for photo in photos  {
@@ -76,7 +76,7 @@ class PhotosModel {
                     case .success(let value):
                         
                         autoreleasepool { let averageColor = value.image.averageColor
-                        BackgroundCacheManager.saveBackground(id: photo.id, averageColor: averageColor ?? .lightGray)
+                            BackgroundCacheManager.saveBackground(id: photo.id, averageColor: averageColor ?? .lightGray)
                         }
                         
                     case .failure:
